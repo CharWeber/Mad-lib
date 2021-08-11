@@ -35,5 +35,19 @@ $(document).ready(function() {
     $(".noun").text(nounInput);
 
     $("#story2").show();
-  })
+
+  });
+  $("#form3").submit(function(event){
+    event.preventDefault();
+    const person1Input = $("input#person1").val();
+    $(".person1").text(person1Input)
+    $("#story2").show();
+  });
+  $("#form4").submit(function(event){
+    event.preventDefault();
+    const shoutInput = $("input#loud").val();
+    
+    $(".loud").text(shoutInput.toUpperCase());
+    $("#shout").show();
+  });
 });
